@@ -1,0 +1,26 @@
+@use "variables" as *;
+@use "colors" as *;
+@use "mixins" as *;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", sans-serif;
+  scroll-behavior: smooth !important;
+}
+@font-face {
+  font-family: "Silkscreen";
+  font-weight: 400;
+  src: url("/font/slkscre.ttf");
+}
+@font-face {
+  font-family: "Silkscreen";
+  font-weight: 700;
+  src: url("/font/slkscreb.ttf");
+}

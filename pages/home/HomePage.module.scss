@@ -1,0 +1,13 @@
+.home-page {
+    background-image: url(/images/night-city.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background: rgba(255, 255, 255, 0.1);
+      }
+}

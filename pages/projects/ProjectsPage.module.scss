@@ -1,0 +1,8 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.projects-page {
+    height: 100vh;
+    background-color: $background-blue;
+}

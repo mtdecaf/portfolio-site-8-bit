@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import styles from "./HomePage.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
@@ -12,21 +14,43 @@ const HomePage = () => {
       />
       <div className={cx("home-page__content")}>
         <div className={cx("home-page__profile-wrap")}>
-            <img
-              className={cx("home-page__profile")}
-              src="/images/profile.png"
-              alt=""
-            />
-            <div className={cx("home-page__profile-icon-wrap")}>
-              <a href="https://github.com/mtdecaf" target="_blank"><img className={cx("home-page__profile-icon")} src="/images/github.svg" alt="" /></a>
-              <a href="https://www.linkedin.com/in/jacky-cao-vancouver/" target="_blank"><img className={cx("home-page__profile-icon")} src="/images/linkedin.svg" alt="" /></a>
-            </div>
+          <img
+            className={cx("home-page__profile")}
+            src="/images/profile.png"
+            alt=""
+          />
+          <div className={cx("home-page__profile-icon-wrap")}>
+            <a href="https://github.com/mtdecaf" target="_blank">
+              <img
+                className={cx("home-page__profile-icon")}
+                src="/images/github.svg"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jacky-cao-vancouver/"
+              target="_blank"
+            >
+              <img
+                className={cx("home-page__profile-icon")}
+                src="/images/linkedin.svg"
+                alt=""
+              />
+            </a>
+          </div>
         </div>
-        <div className={cx("home-page__intro-wrap")}>
+        <motion.div
+          className={cx("home-page__intro-wrap")}
+          initial={{ translateY: "-5rem", opacity: 0 }}
+          animate={{ translateY: 0, opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
           <p className={cx("home-page__intro-para1")}>Hi, My Name Is Jacky!</p>
-          <p className={cx("home-page__intro-para2")}>I'm A Web Developer</p>
+          <p className={cx("home-page__intro-para2")}>
+            I'm A Software Developer
+          </p>
           <p className={cx("home-page__intro-para3")}>Welcome To My Page</p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

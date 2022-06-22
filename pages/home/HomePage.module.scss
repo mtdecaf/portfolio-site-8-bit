@@ -19,7 +19,7 @@
             width: 80%;
         }
         @include desktop {
-            width: 75%;
+            max-width: $desktop;
         }
     }
     &__content {
@@ -37,9 +37,6 @@
             width: 80%;
             flex-direction: row;
             gap: 2.5rem;
-        }
-        @include desktop {
-            width: 75%;
         }
     }
     &__intro{
@@ -76,7 +73,7 @@
             }
         }
         &-icon {
-            filter: invert(100%);
+            filter: invert(95%);
             width: 2.5rem;
             &-wrap {
                 display: flex;

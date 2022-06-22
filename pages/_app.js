@@ -1,7 +1,7 @@
 import "../styles/global/global.scss";
 import Layout from "../components/layout";
 import Head from "next/head";
-import { AnimateSharedLayout } from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,11 +9,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Jacky Cao</title>
       </Head>
-      <AnimateSharedLayout>
+      {/* <AnimatePresence> */}
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </AnimateSharedLayout>
+      {/* </AnimatePresence> */}
     </>
   );
 }

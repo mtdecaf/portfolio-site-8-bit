@@ -31,12 +31,6 @@ const HomePage = () => {
     }
   }, [hasWindow]);
 
-  const profileWrapInitial = {
-    translateX: windowWidth >= 768 && "-5rem",
-    translateY: windowWidth < 768 && "-5rem",
-    opacity: 0,
-  };
-  console.log(windowWidth);
   return (
     mounted && (
       <div className={cx("home-page")}>

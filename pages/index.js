@@ -1,11 +1,5 @@
-import HomePage from './home/index.js'
-
-import styles from '../styles/Home.module.css'
+import HomePage from "./home/index.js";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <HomePage />
-    </div>
-  )
+  return <HomePage />;
 }

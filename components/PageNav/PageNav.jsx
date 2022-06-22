@@ -5,6 +5,8 @@ import styles from "./PageNav.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
+const PAGE_NAV_MOBILE = 660;
+
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
 
@@ -33,7 +35,7 @@ const PageNav = () => {
     }
   }, [hasWindow]);
 
-  return mounted && windowWidth >= 600 ? (
+  return mounted && windowWidth >= PAGE_NAV_MOBILE ? (
     <div className={cx("page-nav")}>
       <div className={cx("page-nav__inner-wrap")}>
         <a
@@ -56,7 +58,7 @@ const PageNav = () => {
         </a>
       </div>
     </div>
-  ) : mounted && windowWidth < 600 ? (
+  ) : mounted && windowWidth < PAGE_NAV_MOBILE ? (
     <div className={cx("page-nav")}>
       <div className={cx("page-nav__inner-wrap--small")}>
         <a

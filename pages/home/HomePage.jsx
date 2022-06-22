@@ -14,11 +14,13 @@ const HomePage = () => {
       />
       <div className={cx("home-page__content")}>
         <div className={cx("home-page__profile-wrap")}>
-          <img
-            className={cx("home-page__profile")}
-            src="/images/profile.png"
-            alt=""
-          />
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
+            <img
+              className={cx("home-page__profile")}
+              src="/images/profile.png"
+              alt=""
+            />
+          </a>
           <div className={cx("home-page__profile-icon-wrap")}>
             <a href="https://github.com/mtdecaf" target="_blank">
               <img

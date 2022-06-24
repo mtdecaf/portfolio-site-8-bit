@@ -9,7 +9,7 @@ const ProjectsPage = () => {
   console.log(projects)
   return (projects.length === 0 ? (
     <div className={cx("projects-page")}>
-        <p className={cx("projects-page__msg")}>Whoops, you caught me at a bad time. There's no projects on display right now. I'm sorry... Forgive me papa...</p>
+        <p className={cx("projects-page__msg")}>Whoops, you caught me at a bad time. There&#39;s no projects on display right now. I&#39;m sorry... Forgive me papa...</p>
     </div>
   ) :null)
 };

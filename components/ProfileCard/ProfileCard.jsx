@@ -49,8 +49,8 @@ const ProfileCard = ({ mounted, windowWidth }) => {
               <>
                 <p className={cx("profile-card__desc")}>
                   A Software Developer who specializes in web development and
-                  neural network. He is a self proclaimed boba "connoisseur" and
-                  won't stop talking about his love for the cyberpunk genre.
+                  neural network. He is a self proclaimed boba &#34;connoisseur&#34; and
+                  won&#39;t stop talking about his love for the cyberpunk genre.
                   Refrain from engaging in conversations regarding his favorate
                   programming language or tech stack or risk being subjected to
                   8 hrs of nerdy rant.
@@ -66,7 +66,7 @@ const ProfileCard = ({ mounted, windowWidth }) => {
               <>
                 <p className={cx("profile-card__desc--short")}>
                   A Software Developer who specializes in web development and
-                  neural network. A boba "connoisseur" and a fan of cyberpunk.
+                  neural network. A boba &#34;connoisseur&#34; and a fan of cyberpunk.
                   Excels at creating efficient product solutions.
                 </p>
                 <p className={cx("profile-card__desc--sub")}>

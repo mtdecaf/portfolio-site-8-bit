@@ -61,6 +61,7 @@ const HomePage = () => {
             <a
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className={cx("home-page__profile")}
@@ -69,7 +70,11 @@ const HomePage = () => {
               />
             </a>
             <div className={cx("home-page__profile-icon-wrap")}>
-              <a href="https://github.com/mtdecaf" target="_blank">
+              <a
+                href="https://github.com/mtdecaf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   className={cx("home-page__profile-icon")}
                   src="/images/github.svg"
@@ -79,6 +84,7 @@ const HomePage = () => {
               <a
                 href="https://www.linkedin.com/in/jacky-cao-vancouver/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <img
                   className={cx("home-page__profile-icon")}
@@ -105,7 +111,7 @@ const HomePage = () => {
               Hi, My Name Is Jacky!
             </p>
             <p className={cx("home-page__intro-para2")}>
-              I'm A Software Developer
+              I&#39;m A Software Developer
             </p>
             <p className={cx("home-page__intro-para3")}>Welcome To My Page</p>
           </motion.div>

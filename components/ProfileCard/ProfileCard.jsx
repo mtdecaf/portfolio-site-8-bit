@@ -58,16 +58,16 @@ const ProfileCard = ({ mounted, windowWidth }) => {
                 <p className={cx("profile-card__desc")}>
                   The subject is an expert in javascript and c++. He has
                   extensive experience in full stack web development. Excels at
-                  creating efficient solutions and is well versed in Recursive +
-                  Dynamic Programming Algorithm.
+                  creating efficient solutions and is well versed in design
+                  patterns.
                 </p>
               </>
             ) : (
               <>
                 <p className={cx("profile-card__desc--short")}>
-                  A Software Developer who specializes in web
-                  development and neural network. A boba "connoisseur" and a fan
-                  of cyberpunk. Excels at creating efficient product solutions.
+                  A Software Developer who specializes in web development and
+                  neural network. A boba "connoisseur" and a fan of cyberpunk.
+                  Excels at creating efficient product solutions.
                 </p>
                 <p className={cx("profile-card__desc--sub")}>
                   &#40;View this on a larger screen for more info&#41;

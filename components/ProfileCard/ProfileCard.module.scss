@@ -3,11 +3,11 @@
 @use "styles/global/variables.scss" as *;
 
 .profile-card {
-    position: absolute;
+    position: relative;
     width: 90%;
     max-height: 40rem;
     height: 100%;
-    top: 7rem;
+    // margin-top: 7rem;
     @include tablet {
         width: 80%;
     }
@@ -78,7 +78,7 @@
             list-style: none;
             padding: 20px 0;
             @include tablet {
-                padding:0 0 0 1rem;
+                padding:0 0 1rem 1rem;
             }
             @include desktop {
                 padding-bottom: 40px;
@@ -115,6 +115,7 @@
         }
         &-wrap {
             @include side-padding-mobile;
+            padding-bottom: 1rem;
             @include tablet {
                 padding-top: 40px;
                 padding-bottom: 40px;

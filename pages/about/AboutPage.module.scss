@@ -3,8 +3,8 @@
 @use "styles/global/variables.scss" as *;
 
 .about-page {
-    min-height: 100vh;
-    height: auto;
+    min-height: calc(100vh - 7rem);
+    height: 100%;
     background-color: $background-blue;
     display: flex;
     justify-content: center;

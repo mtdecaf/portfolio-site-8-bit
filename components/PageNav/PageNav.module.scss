@@ -5,7 +5,8 @@
 .page-nav {
     width: 100vw;
     height: 7rem;
-    position: fixed;
+    // position: fixed;
+    background-color: $background-blue;
     z-index: 100;
     display: flex;
     justify-content: center;

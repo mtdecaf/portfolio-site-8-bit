@@ -3,7 +3,7 @@
 @use "styles/global/variables.scss" as *;
 
 .home-page {
-    height: 100vh;
+    min-height: calc(100vh - 7rem);
     background-color: $background-blue;
     display: flex;
     justify-content: center;
@@ -14,7 +14,6 @@
         width: 90%;
         min-width: 720px;
         position: absolute;
-        margin-top: 3.5rem;
         @include tablet {
             width: 80%;
         }

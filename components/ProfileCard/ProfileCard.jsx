@@ -6,6 +6,9 @@ const ProfileCard = ({ mounted, windowWidth }) => {
   return (
     mounted && (
       <div className={cx("profile-card")}>
+        <div className={cx("profile-card__tab-wrap")}>
+          <p className={cx("profile-card__tab")}>Developer Profile</p>
+        </div>
         <div className={cx("profile-card__content")}>
           <div
             className={cx("profile-card__stats-wrap")}

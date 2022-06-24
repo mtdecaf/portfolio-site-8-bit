@@ -3,9 +3,11 @@
 @use "styles/global/variables.scss" as *;
 
 .about-page {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-color: $background-blue;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }

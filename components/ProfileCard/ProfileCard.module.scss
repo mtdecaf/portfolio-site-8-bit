@@ -5,13 +5,11 @@
 .profile-card {
     position: absolute;
     width: 90%;
-    max-height: 38rem;
-    min-height: 31rem;
-    margin-top: 3.5rem;
+    max-height: 40rem;
+    height: 100%;
+    top: 7rem;
     @include tablet {
         width: 80%;
-        height: 33.5rem;
-        max-height: none;
     }
     @include desktop {
         max-width: $desktop;
@@ -37,7 +35,6 @@
         width: calc(100% - 1rem);
         height: calc(100% - 1rem);
         margin: 0.5rem;
-        position: absolute;
         background-image: url(/images/paper.svg);
         display: flex;
         flex-direction: column;
@@ -55,7 +52,6 @@
             }
             @include desktop {
                 height: 100%;
-                // width: 20rem;
             }
         }
         &-profile {
@@ -76,10 +72,6 @@
                     width: 15rem;
                     height: 15rem;
                 }
-                // @include desktop {
-                //     min-width: 20rem;
-                //     height: 20rem;
-                // }
             }
         }
         &-list {
@@ -94,11 +86,14 @@
         }
         &-item {
             font-weight: 700;
-            line-height: 1.5rem;
+            line-height: 1.25rem;
+            @include tablet {
+                line-height: 1.5rem;
+            }
         }
     }
     &__desc {
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-indent: 1rem;
         padding: 0.25rem 0;
         @include tablet {

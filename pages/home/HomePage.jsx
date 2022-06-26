@@ -37,7 +37,7 @@ const HomePage = () => {
         <img
           className={cx("home-page__background")}
           src="/images/night-city.gif"
-          alt=""
+          alt="Night City Background"
         />
         <div className={cx("home-page__content")}>
           <motion.div
@@ -66,7 +66,7 @@ const HomePage = () => {
               <img
                 className={cx("home-page__profile")}
                 src="/images/profile.png"
-                alt=""
+                alt="Jacky Cao Profile"
               />
             </a>
             <div className={cx("home-page__profile-icon-wrap")}>
@@ -78,7 +78,7 @@ const HomePage = () => {
                 <img
                   className={cx("home-page__profile-icon")}
                   src="/images/github.svg"
-                  alt=""
+                  alt="Jacky Cao GitHub Page Link"
                 />
               </a>
               <a
@@ -89,7 +89,7 @@ const HomePage = () => {
                 <img
                   className={cx("home-page__profile-icon")}
                   src="/images/linkedin.svg"
-                  alt=""
+                  alt="Jacky Cao LinkedIn Page Link"
                 />
               </a>
             </div>

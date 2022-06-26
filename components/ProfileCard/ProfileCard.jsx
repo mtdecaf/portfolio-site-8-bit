@@ -29,7 +29,7 @@ const ProfileCard = ({ mounted, windowWidth }) => {
               <img
                 className={cx("profile-card__stats-profile")}
                 src="/images/profile.png"
-                alt=""
+                alt="Jacky Cao Profile Picture"
                 style={windowWidth < 375 ? { width: "6rem" } : {}}
               />
             </div>

@@ -34,11 +34,6 @@ const HomePage = () => {
   return (
     mounted && (
       <div className={cx("home-page")}>
-        <img
-          className={cx("home-page__background")}
-          src="/images/night-city.gif"
-          alt="Night City Background"
-        />
         <div className={cx("home-page__content")}>
           <motion.div
             className={cx("home-page__profile-wrap")}

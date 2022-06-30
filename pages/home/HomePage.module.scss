@@ -3,28 +3,17 @@
 @use "styles/global/variables.scss" as *;
 
 .home-page {
-    min-height: calc(100vh - 7rem);
-    background-color: $background-blue;
+    width: 100%;
+    height: 100%;
+    background-color: $off-white;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    &__background {
-        width: 90%;
-        min-width: 720px;
-        position: absolute;
-        @include tablet {
-            width: 80%;
-        }
-        @include desktop {
-            max-width: $desktop;
-        }
-    }
+
     &__content {
         z-index: 100;
-        width: 90%;
-        min-width: 720px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,7 +22,6 @@
         margin-top: 3.5rem;
         @include side-padding-mobile;
         @include tablet {
-            width: 80%;
             flex-direction: row;
             gap: 2.5rem;
         }

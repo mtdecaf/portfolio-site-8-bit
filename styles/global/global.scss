@@ -3,10 +3,13 @@
 @use "mixins" as *;
 
 a {
-  color: inherit;
   text-decoration: none;
 }
-
+#__next {
+  @include tablet {
+    display: flex;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,6 +21,9 @@ a {
 body {
   width: 100%;
   height: 100%;
+}
+main {
+  width: 100%;
 }
 @font-face {
   font-family: "Silkscreen";

@@ -35,19 +35,9 @@ const PageNav = () => {
     }
   }, [hasWindow]);
 
-  return mounted && windowWidth >= PAGE_NAV_MOBILE ? (
-    <div className={cx("page-nav")}>
+  return mounted && windowWidth >= 768 ? (
+    <div className={cx("page-nav", "nes-container")}>
       <div className={cx("page-nav__inner-wrap")}>
-        <a
-          className={cx(
-            "page-nav__button",
-            "page-nav__option",
-            "page-nav__projects"
-          )}
-          onClick={() => router.push("/projects", undefined, { shallow: true })}
-        >
-          &lt;- Projects
-        </a>
         <a
           className={cx(
             "page-nav__button",
@@ -62,51 +52,27 @@ const PageNav = () => {
           className={cx(
             "page-nav__button",
             "page-nav__option",
+            "page-nav__projects"
+          )}
+          onClick={() => router.push("/projects", undefined, { shallow: true })}
+        >
+          Projects -&gt;
+        </a>
+
+        <a
+          className={cx(
+            "page-nav__button",
+            "page-nav__option",
             "page-nav__about"
           )}
           onClick={() => router.push("/about", undefined, { shallow: true })}
         >
-          About <span>-&gt;</span>{" "}
+          About -&gt;
         </a>
       </div>
     </div>
-  ) : mounted && windowWidth < PAGE_NAV_MOBILE ? (
-    <div className={cx("page-nav")}>
-      <div className={cx("page-nav__inner-wrap--small")}>
-        <a
-          className={cx("page-nav__button", "page-nav__home")}
-          onClick={() => router.push("/", undefined, { shallow: true })}
-        >
-          Jacky Cao
-        </a>
-        <div className={cx("page-nav__options-wrap")}>
-          <a
-            className={cx(
-              "page-nav__button",
-              "page-nav__option",
-              "page-nav__projects",
-              "page-nav__projects--small"
-            )}
-            onClick={() =>
-              router.push("/projects", undefined, { shallow: true })
-            }
-          >
-            &lt;- Projects
-          </a>
-          <a
-            className={cx(
-              "page-nav__button",
-              "page-nav__option",
-              "page-nav__about",
-              "page-nav__about--small"
-            )}
-            onClick={() => router.push("/about", undefined, { shallow: true })}
-          >
-            About <span>-&gt;</span>
-          </a>
-        </div>
-      </div>
-    </div>
+  ) : mounted && windowWidth < 768 ? (
+    <div></div>
   ) : null;
 };
 

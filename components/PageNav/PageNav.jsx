@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { MdMenu } from "react-icons/md";
+
+import BurgerMenu from "./components/BugerMenu";
 
 import styles from "./PageNav.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const PAGE_NAV_MOBILE = 660;
-
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
+  const router = useRouter(false);
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
-  const [mounted, setMounted] = useState(false);
-
-  const router = useRouter();
+  const [navIsOpen, setNavIsOpen] = useState(false);
+  const [mounted, setMounted] = useState();
 
   function getWindowWidth() {
     const width = hasWindow ? window.innerWidth : null;
@@ -35,7 +36,28 @@ const PageNav = () => {
     }
   }, [hasWindow]);
 
-  return mounted && windowWidth >= 768 ? (
+  const handleRouteChange = (param) => {
+    router.push(`/${param}`, undefined, { shallow: true });
+    navIsOpen && setNavIsOpen(false);
+  }
+
+  return mounted && windowWidth < 768 ? (
+    <>
+      {!navIsOpen && (
+        <div className={cx("page-nav__burger-icon-wrap")}>
+          <MdMenu
+            size={48}
+            color= "#212529"
+            onClick={() => {
+              console.log("clicked")
+              setNavIsOpen(!navIsOpen);
+            }}
+          />
+        </div>
+      )}
+      {navIsOpen && <BurgerMenu setNavIsOpen={setNavIsOpen} router={router} handleRouteChange={handleRouteChange} />}
+    </>
+  ) : mounted && windowWidth >= 768 ? (
     <div className={cx("page-nav", "nes-container")}>
       <div className={cx("page-nav__inner-wrap")}>
         <a
@@ -44,7 +66,7 @@ const PageNav = () => {
             "page-nav__option",
             "page-nav__home"
           )}
-          onClick={() => router.push("/", undefined, { shallow: true })}
+          onClick={() => handleRouteChange("")}
         >
           Jacky Cao
         </a>
@@ -54,7 +76,7 @@ const PageNav = () => {
             "page-nav__option",
             "page-nav__projects"
           )}
-          onClick={() => router.push("/projects", undefined, { shallow: true })}
+          onClick={() => handleRouteChange("projects")}
         >
           Projects -&gt;
         </a>
@@ -65,14 +87,12 @@ const PageNav = () => {
             "page-nav__option",
             "page-nav__about"
           )}
-          onClick={() => router.push("/about", undefined, { shallow: true })}
+          onClick={() => handleRouteChange("about")}
         >
           About -&gt;
         </a>
       </div>
     </div>
-  ) : mounted && windowWidth < 768 ? (
-    <div></div>
   ) : null;
 };
 

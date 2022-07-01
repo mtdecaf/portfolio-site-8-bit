@@ -46,7 +46,7 @@
         color: $background-dark !important;
         width: 100%;
         cursor: pointer;
-        &:focus {
+        &:focus, &:active {
             -webkit-box-shadow: none;
             box-shadow: none;
         }

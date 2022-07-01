@@ -5,6 +5,9 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
+  const currentRoute = router.route;
+  console.log(currentRoute);
+
   return (
     <div className={cx("burger-menu", "nes-container")}>
       <div className={cx("burger-menu__inner-wrap")}>
@@ -13,35 +16,38 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
             "burger-menu__button",
             "burger-menu__option",
             "burger-menu__home",
-            "nes-btn"
+            "nes-btn",
+            currentRoute === "/" && "is-success"
           )}
           onClick={() => handleRouteChange("")}
         >
-          Jacky Cao
+          Home
+        </button>
+        <button
+          className={cx(
+            "burger-menu__button",
+            "burger-menu__option",
+            "burger-menu__about",
+            "nes-btn",
+            currentRoute === "/about" && "is-success"
+          )}
+          onClick={() => handleRouteChange("about")}
+        >
+          About -&gt;
         </button>
         <button
           className={cx(
             "burger-menu__button",
             "burger-menu__option",
             "burger-menu__projects",
-            "nes-btn"
+            "nes-btn",
+            currentRoute === "/projects" && "is-success"
           )}
           onClick={() => handleRouteChange("projects")}
         >
           Projects -&gt;
         </button>
 
-        <button
-          className={cx(
-            "burger-menu__button",
-            "burger-menu__option",
-            "burger-menu__about",
-            "nes-btn"
-          )}
-          onClick={() => handleRouteChange("about")}
-        >
-          About -&gt;
-        </button>
         <div className={cx("burger-menu__close-wrap")}>
           <FaBackward
             className={cx("burger-menu__close")}

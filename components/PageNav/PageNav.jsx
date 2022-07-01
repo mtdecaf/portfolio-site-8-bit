@@ -10,7 +10,9 @@ let cx = classNames.bind(styles);
 
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
-  const router = useRouter(false);
+  const router = useRouter();
+  const currentRoute = router.route;
+  console.log(currentRoute);
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -39,7 +41,7 @@ const PageNav = () => {
   const handleRouteChange = (param) => {
     router.push(`/${param}`, undefined, { shallow: true });
     navIsOpen && setNavIsOpen(false);
-  }
+  };
 
   return mounted && windowWidth < 768 ? (
     <>
@@ -47,15 +49,21 @@ const PageNav = () => {
         <div className={cx("page-nav__burger-icon-wrap")}>
           <MdMenu
             size={64}
-            color= "#212529"
+            color="#212529"
             onClick={() => {
-              console.log("clicked")
+              console.log("clicked");
               setNavIsOpen(!navIsOpen);
             }}
           />
         </div>
       )}
-      {navIsOpen && <BurgerMenu setNavIsOpen={setNavIsOpen} router={router} handleRouteChange={handleRouteChange} />}
+      {navIsOpen && (
+        <BurgerMenu
+          setNavIsOpen={setNavIsOpen}
+          router={router}
+          handleRouteChange={handleRouteChange}
+        />
+      )}
     </>
   ) : mounted && windowWidth >= 768 ? (
     <div className={cx("page-nav", "nes-container")}>
@@ -65,34 +73,36 @@ const PageNav = () => {
             "page-nav__button",
             "page-nav__option",
             "page-nav__home",
-            "nes-btn"
+            "nes-btn",
+            currentRoute === "/" && "is-success"
           )}
           onClick={() => handleRouteChange("")}
         >
-          Jacky Cao
+          Home
+        </button>
+        <button
+          className={cx(
+            "page-nav__button",
+            "page-nav__option",
+            "page-nav__about",
+            "nes-btn",
+            currentRoute === "/about" && "is-success"
+          )}
+          onClick={() => handleRouteChange("about")}
+        >
+          About -&gt;
         </button>
         <button
           className={cx(
             "page-nav__button",
             "page-nav__option",
             "page-nav__projects",
-            "nes-btn"
+            "nes-btn",
+            currentRoute === "/projects" && "is-success"
           )}
           onClick={() => handleRouteChange("projects")}
         >
           Projects -&gt;
-        </button>
-
-        <button
-          className={cx(
-            "page-nav__button",
-            "page-nav__option",
-            "page-nav__about",
-            "nes-btn"
-          )}
-          onClick={() => handleRouteChange("about")}
-        >
-          About -&gt;
         </button>
       </div>
     </div>

@@ -64,6 +64,7 @@ const HomePage = () => {
                 alt="Jacky Cao Profile"
               />
             </a>
+            <p className={cx("home-page__name")}>Jacky Cao</p>
             <div className={cx("home-page__profile-icon-wrap")}>
               <a
                 href="https://github.com/mtdecaf"

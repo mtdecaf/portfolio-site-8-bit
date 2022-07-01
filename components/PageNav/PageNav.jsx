@@ -46,7 +46,7 @@ const PageNav = () => {
       {!navIsOpen && (
         <div className={cx("page-nav__burger-icon-wrap")}>
           <MdMenu
-            size={48}
+            size={64}
             color= "#212529"
             onClick={() => {
               console.log("clicked")
@@ -60,37 +60,40 @@ const PageNav = () => {
   ) : mounted && windowWidth >= 768 ? (
     <div className={cx("page-nav", "nes-container")}>
       <div className={cx("page-nav__inner-wrap")}>
-        <a
+        <button
           className={cx(
             "page-nav__button",
             "page-nav__option",
-            "page-nav__home"
+            "page-nav__home",
+            "nes-btn"
           )}
           onClick={() => handleRouteChange("")}
         >
           Jacky Cao
-        </a>
-        <a
+        </button>
+        <button
           className={cx(
             "page-nav__button",
             "page-nav__option",
-            "page-nav__projects"
+            "page-nav__projects",
+            "nes-btn"
           )}
           onClick={() => handleRouteChange("projects")}
         >
           Projects -&gt;
-        </a>
+        </button>
 
-        <a
+        <button
           className={cx(
             "page-nav__button",
             "page-nav__option",
-            "page-nav__about"
+            "page-nav__about",
+            "nes-btn"
           )}
           onClick={() => handleRouteChange("about")}
         >
           About -&gt;
-        </a>
+        </button>
       </div>
     </div>
   ) : null;

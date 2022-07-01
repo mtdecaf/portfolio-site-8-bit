@@ -8,37 +8,40 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
   return (
     <div className={cx("burger-menu", "nes-container")}>
       <div className={cx("burger-menu__inner-wrap")}>
-        <a
+        <button
           className={cx(
             "burger-menu__button",
             "burger-menu__option",
-            "burger-menu__home"
+            "burger-menu__home",
+            "nes-btn"
           )}
           onClick={() => handleRouteChange("")}
         >
           Jacky Cao
-        </a>
-        <a
+        </button>
+        <button
           className={cx(
             "burger-menu__button",
             "burger-menu__option",
-            "burger-menu__projects"
+            "burger-menu__projects",
+            "nes-btn"
           )}
           onClick={() => handleRouteChange("projects")}
         >
           Projects -&gt;
-        </a>
+        </button>
 
-        <a
+        <button
           className={cx(
             "burger-menu__button",
             "burger-menu__option",
-            "burger-menu__about"
+            "burger-menu__about",
+            "nes-btn"
           )}
           onClick={() => handleRouteChange("about")}
         >
           About -&gt;
-        </a>
+        </button>
         <div className={cx("burger-menu__close-wrap")}>
           <FaBackward
             className={cx("burger-menu__close")}

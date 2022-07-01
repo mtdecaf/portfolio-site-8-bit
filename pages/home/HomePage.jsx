@@ -102,13 +102,13 @@ const HomePage = () => {
               introWrapAnimate: { translateY: 0, opacity: 1 },
             }}
           >
-            <p className={cx("home-page__intro-para1")}>
+            <p className={cx("home-page__intro-para1", "home-page__intro")}>
               Hi, My Name Is Jacky!
             </p>
-            <p className={cx("home-page__intro-para2")}>
+            <p className={cx("home-page__intro-para2", "home-page__intro")}>
               I&#39;m A Software Developer
             </p>
-            <p className={cx("home-page__intro-para3")}>Welcome To My Page</p>
+            <p className={cx("home-page__intro-para3", "home-page__intro")}>Welcome To My Page</p>
           </motion.div>
         </div>
       </div>

@@ -11,17 +11,17 @@
     justify-content: center;
     padding: 0.75rem 1rem !important;
     @include tablet {
-        width: 17.5rem;
+        width: 19rem;
     }
     @include desktop {
-        width: 20rem;
         padding: 1rem 1.25rem !important;
     }
     &__burger-icon {
         cursor: pointer;
         &-wrap {
             position:fixed;
-            left: 0.75rem;
+            left: 1rem;
+            top: 1.75rem;
             z-index: 100;
         }
     }
@@ -42,9 +42,13 @@
         justify-content: center;
     }
     &__button {
-        font-size: 1.25rem;
-        color: $off-white !important;
+        font-size: 1.2rem;
+        color: $background-dark !important;
         width: 100%;
         cursor: pointer;
+        &:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
     }
 }

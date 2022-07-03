@@ -17,15 +17,6 @@ const ProfileCard = ({ mounted, windowWidth }) => {
         <div className={cx("profile-card__content")}>
           <div
             className={cx("profile-card__stats-wrap", "profile-card__content-child")}
-            style={
-              windowWidth < 425
-                ? {
-                    flexDirection: "column",
-                    padding: "0 1rem",
-                    fontSize: "0.9rem",
-                  }
-                : {}
-            }
           >
             <div
               className={cx("profile-card__stats-profile-wrap")}
@@ -40,8 +31,7 @@ const ProfileCard = ({ mounted, windowWidth }) => {
               <li className={cx("profile-card__stats-item")}>Name: Jacky Cao</li>
               <li className={cx("profile-card__stats-item")}>Race: Human</li>
               <li className={cx("profile-card__stats-item")}>Weaknesses: Boba</li>
-              <li className={cx("profile-card__stats-item")}>Interests: Boba</li>
-              <li className={cx("profile-card__stats-item")}>Religion: The Cult of C++</li>
+              <li className={cx("profile-card__stats-item")}>Interests: Predictive Analytics, Web Development</li>
               <li className={cx("profile-card__stats-item")}>
                 Skills: React JS, Next JS, SQL, TypeScript, Git, Python, C++,
                 Jest, Java, OOP, REST APIs, TTD, Agile Development

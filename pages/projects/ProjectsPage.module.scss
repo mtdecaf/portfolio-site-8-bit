@@ -3,15 +3,14 @@
 @use "styles/global/variables.scss" as *;
 
 .projects-page {
-    min-height: calc(100vh - 7rem);
     height: 100%;
-    background-color: $background-blue;
+    background-color: $off-white;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     &__msg {
-        color: white;
+        color: $background-dark;
         font-size: 1.75rem;
         text-align: center;
         @include side-padding-mobile;

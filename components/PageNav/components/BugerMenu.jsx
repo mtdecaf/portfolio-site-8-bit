@@ -6,7 +6,6 @@ let cx = classNames.bind(styles);
 
 const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
   const currentRoute = router.route;
-  console.log(currentRoute);
 
   return (
     <div className={cx("burger-menu", "nes-container")}>

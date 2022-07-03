@@ -3,11 +3,14 @@
 @use "styles/global/variables.scss" as *;
 
 .about-page {
-    min-height: calc(100vh - 7rem);
+    width: 100vw;
     height: 100%;
-    background-color: $background-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $off-white;
     position: relative;
+    @include tablet {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

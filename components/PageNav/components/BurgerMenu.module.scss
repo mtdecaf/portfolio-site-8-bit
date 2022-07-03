@@ -3,7 +3,7 @@
 @use "styles/global/variables.scss" as *;
 
 .burger-menu {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: $background-dark;
     z-index: 100;

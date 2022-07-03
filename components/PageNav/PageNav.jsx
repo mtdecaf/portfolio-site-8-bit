@@ -12,7 +12,6 @@ const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
   const router = useRouter();
   const currentRoute = router.route;
-  console.log(currentRoute);
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -51,7 +50,6 @@ const PageNav = () => {
             size={64}
             color="#212529"
             onClick={() => {
-              console.log("clicked");
               setNavIsOpen(!navIsOpen);
             }}
           />

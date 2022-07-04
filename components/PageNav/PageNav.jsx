@@ -64,7 +64,7 @@ const PageNav = () => {
       )}
     </>
   ) : mounted && windowWidth >= 768 ? (
-    <div className={cx("page-nav", "nes-container")}>
+    <div className={cx("page-nav", "container")}>
       <div className={cx("page-nav__inner-wrap")}>
         <button
           className={cx(

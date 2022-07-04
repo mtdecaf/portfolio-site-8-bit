@@ -1,10 +1,20 @@
 @use "variables" as *;
 @use "colors" as *;
 @use "mixins" as *;
+@use "container_styling.scss" as *;
 
 a {
   text-decoration: none;
 }
+
+html {
+  cursor: url(/cursors/cursor.png),auto;
+}
+
+a, button {
+  cursor: url(/cursors/pointer.png) 14 0,pointer;
+}
+
 #__next {
   @include tablet {
     display: flex;

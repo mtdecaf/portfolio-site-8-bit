@@ -18,15 +18,8 @@
     }
     &__title {
         background-color: $off-white !important;
-        font-size: 1rem !important;
-        margin-bottom: 0 !important;
-        z-index: 1000 !important;
-        @include tablet {
-        font-size: 1.5rem !important;
-        }
-        @include desktop {
-            font-size: 2rem !important;
-        }
+        margin-bottom: 0;
+        z-index: 10;
     }
     &__content {
         height: 100%;

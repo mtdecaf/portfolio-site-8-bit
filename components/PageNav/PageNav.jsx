@@ -71,8 +71,8 @@ const PageNav = () => {
             "page-nav__button",
             "page-nav__option",
             "page-nav__home",
-            "nes-btn",
-            currentRoute === "/" && "is-success"
+            "button",
+            currentRoute === "/" && "is-green"
           )}
           onClick={() => handleRouteChange("")}
         >
@@ -83,8 +83,8 @@ const PageNav = () => {
             "page-nav__button",
             "page-nav__option",
             "page-nav__about",
-            "nes-btn",
-            currentRoute === "/about" && "is-success"
+            "button",
+            currentRoute === "/about" && "is-green"
           )}
           onClick={() => handleRouteChange("about")}
         >
@@ -95,8 +95,8 @@ const PageNav = () => {
             "page-nav__button",
             "page-nav__option",
             "page-nav__projects",
-            "nes-btn",
-            currentRoute === "/projects" && "is-success"
+            "button",
+            currentRoute === "/projects" && "is-green"
           )}
           onClick={() => handleRouteChange("projects")}
         >

@@ -2,7 +2,7 @@ import "../styles/global/global.scss";
 import Layout from "../components/layout";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
-import "nes.css/css/nes.min.css";
+// import "nes.css/css/nes.min.css";
 
 
 function MyApp({ Component, pageProps }) {
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
           content="Jacky Cao software developer's website. Find a list of projects and profile by Jacky here."
         />
         <meta name="robots" content="index, follow" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
       </Head>
       <AnimatePresence>
         <Layout>

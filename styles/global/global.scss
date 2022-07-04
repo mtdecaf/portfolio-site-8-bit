@@ -1,7 +1,8 @@
 @use "variables" as *;
 @use "colors" as *;
 @use "mixins" as *;
-@use "container_styling.scss" as *;
+@use "container_styling" as *;
+@use "buttons" as *; 
 
 a {
   text-decoration: none;

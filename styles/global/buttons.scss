@@ -1,0 +1,58 @@
+.button {
+    border-image-slice: 2;
+    border-image-width: 2;
+    border-image-repeat: stretch;
+    border-image-source: url("/button-corner.svg");
+    border-image-outset: 2;
+    position: relative;
+    display: inline-block;
+    padding: 6px 8px;
+    margin: 4px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #212529;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 4px;
+    &::after {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        bottom: -4px;
+        left: -4px;
+        content: "";
+        box-shadow: inset -4px -4px #adafbc;
+    }
+    &:hover {
+        color: #212529;
+        text-decoration: none;
+        background-color: #e7e7e7;
+        &::after {
+            box-shadow: inset -6px -6px #adafbc;
+        }
+    }
+    &:active {
+        box-shadow: none;
+    }
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 6px rgb(173 175 188 / 30%);
+    }
+}
+
+.is-green {
+    background-color: #92cc41;
+    &::after {
+        box-shadow: inset -4px -4px #4aa52e;
+    }
+    &:hover {
+        background-color: #76c442;
+        &::after {
+            box-shadow: inset -6px -6px #4aa52e;
+        }
+    }
+}

@@ -15,8 +15,8 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
             "burger-menu__button",
             "burger-menu__option",
             "burger-menu__home",
-            "nes-btn",
-            currentRoute === "/" && "is-success"
+            "button",
+            currentRoute === "/" && "is-green"
           )}
           onClick={() => handleRouteChange("")}
         >
@@ -27,8 +27,8 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
             "burger-menu__button",
             "burger-menu__option",
             "burger-menu__about",
-            "nes-btn",
-            currentRoute === "/about" && "is-success"
+            "button",
+            currentRoute === "/about" && "is-green"
           )}
           onClick={() => handleRouteChange("about")}
         >
@@ -39,8 +39,8 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
             "burger-menu__button",
             "burger-menu__option",
             "burger-menu__projects",
-            "nes-btn",
-            currentRoute === "/projects" && "is-success"
+            "button",
+            currentRoute === "/projects" && "is-green"
           )}
           onClick={() => handleRouteChange("projects")}
         >

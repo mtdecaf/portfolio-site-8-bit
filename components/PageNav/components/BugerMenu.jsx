@@ -8,7 +8,7 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
   const currentRoute = router.route;
 
   return (
-    <div className={cx("burger-menu", "nes-container")}>
+    <div className={cx("burger-menu", "container")}>
       <div className={cx("burger-menu__inner-wrap")}>
         <button
           className={cx(

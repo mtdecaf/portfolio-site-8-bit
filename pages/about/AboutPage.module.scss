@@ -4,6 +4,7 @@
 
 .about-page {
     width: 100vw;
+    min-height: 100vh;
     height: 100%;
     background-color: $off-white;
     position: relative;
@@ -12,5 +13,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    &__card-wrap {
+        height: 100%;
+        padding: 7.5rem 1.5rem 1rem;
     }
 }

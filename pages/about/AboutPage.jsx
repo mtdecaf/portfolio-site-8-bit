@@ -34,7 +34,9 @@ const AboutPage = () => {
   return (
     mounted && (
       <div className={cx("about-page")}>
-        <ProfileCard mounted={mounted} windowWidth={windowWidth} />
+        <div className={cx("about-page__card-wrap")}>
+          <ProfileCard mounted={mounted} windowWidth={windowWidth} />
+        </div>
       </div>
     )
   );

@@ -3,6 +3,7 @@
 @use "styles/global/variables.scss" as *;
 
 .projects-page {
+    min-height: 100vh;
     height: 100%;
     background-color: $off-white;
     display: flex;

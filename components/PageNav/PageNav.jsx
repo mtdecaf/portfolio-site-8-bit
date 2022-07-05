@@ -88,7 +88,7 @@ const PageNav = () => {
           )}
           onClick={() => handleRouteChange("about")}
         >
-          About -&gt;
+          About
         </button>
         <button
           className={cx(
@@ -100,7 +100,7 @@ const PageNav = () => {
           )}
           onClick={() => handleRouteChange("projects")}
         >
-          Projects -&gt;
+          Projects
         </button>
       </div>
     </div>

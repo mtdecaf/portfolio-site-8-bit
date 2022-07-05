@@ -32,7 +32,7 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
           )}
           onClick={() => handleRouteChange("about")}
         >
-          About -&gt;
+          About
         </button>
         <button
           className={cx(
@@ -44,7 +44,7 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
           )}
           onClick={() => handleRouteChange("projects")}
         >
-          Projects -&gt;
+          Projects
         </button>
 
         <div className={cx("burger-menu__close-wrap")}>

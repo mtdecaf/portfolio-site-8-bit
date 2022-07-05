@@ -19,9 +19,8 @@
     &__burger-icon {
         cursor: pointer;
         &-wrap {
-            position:fixed;
-            left: 1rem;
-            top: 1.75rem;
+            background-color: $off-white;
+            height: 4.25rem;
             z-index: 100;
         }
     }

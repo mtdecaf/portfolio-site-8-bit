@@ -1,11 +1,13 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 
 import styles from "./ProfileCard.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const ProfileCard = ({ mounted }) => {
+const TABLET_BREAKPOINT = 768;
+
+const ProfileCard = ({ mounted, windowWidth }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const contentRef = useRef(null);
   const statsRef = useRef(null);
@@ -17,12 +19,12 @@ const ProfileCard = ({ mounted }) => {
   };
   const scrollTo = (position) => {
     if (position === "up") {
-      statsRef.current?.scrollIntoView({behavior: 'smooth'});
+      statsRef.current?.scrollIntoView({ behavior: "smooth" });
     }
     if (position === "down") {
-      descRef.current?.scrollIntoView({behavior: 'smooth'});
+      descRef.current?.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     mounted && (
@@ -90,10 +92,30 @@ const ProfileCard = ({ mounted }) => {
             </p>
           </div>
         </div>
-        <div className={cx("profile-card__scroll")}>
-          <Image onClick={() => scrollTo("up")} className={cx("profile-card__scroll-icon")} src="/container-corner.svg" width="24" height="24" />
-          <Image onClick={() => scrollTo("down")} className={cx("profile-card__scroll-icon")} src="/container-corner.svg" width="24" height="24" />
-        </div>
+        {windowWidth >= TABLET_BREAKPOINT && (
+          <div className={cx("profile-card__scroll")}>
+            <div className={cx("profile-card__scroll-icon-wrap")}>
+              {scrollPosition <= 24 && <span className={cx("profile-card__scroll-icon--clicked")}></span>}
+              <Image
+                onClick={() => scrollTo("up")}
+                className={cx("profile-card__scroll-icon")}
+                src="/container-corner.svg"
+                width="24"
+                height="24"
+              />
+            </div>
+            <div className={cx("profile-card__scroll-icon-wrap")}>
+              {scrollPosition > 24 && <span className={cx("profile-card__scroll-icon--clicked")}></span>}
+              <Image
+                onClick={() => scrollTo("down")}
+                className={cx("profile-card__scroll-icon")}
+                src="/container-corner.svg"
+                width="24"
+                height="24"
+              />
+            </div>
+          </div>
+        )}
       </div>
     )
   );

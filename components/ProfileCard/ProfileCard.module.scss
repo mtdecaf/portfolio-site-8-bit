@@ -18,13 +18,13 @@
     }
     &__content {
         height: 100%;
-        padding: 1rem 1.25rem !important;
+        padding: 0.75rem 1rem;
         position: relative;
         @include tablet {
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
             height: calc(100% - 24px);
-            padding: 1.5rem 2rem !important;
+            padding: 1.5rem 2rem;
         }
         &::-webkit-scrollbar {
             width: 0;
@@ -37,6 +37,7 @@
     &__desc {
         text-indent: 1rem;
         font-size: 1.15rem;
+        padding: 0.5rem 0;
         @include tablet {
             text-indent: 2rem;
             font-size: 1.35rem;
@@ -86,6 +87,19 @@
         right: 1rem;
         &-icon {
             cursor: url(/cursors/pointer.png) 14 0,pointer;
+            &--clicked {
+                width: 0.9rem;
+                height: 0.9rem;
+                display: inline-block;
+                position: absolute;
+                top: 0.3rem;
+                left: 0.3rem;
+                background-color: $dark-grey;
+                border-radius: 50%;
+            }
+            &-wrap {
+                position: relative;
+            }
         }
     }
 }

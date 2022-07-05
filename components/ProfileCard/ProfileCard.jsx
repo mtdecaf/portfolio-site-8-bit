@@ -23,7 +23,7 @@ const ProfileCard = ({ mounted }) => {
       descRef.current?.scrollIntoView({behavior: 'smooth'});
     }
   }
-  console.log(scrollPosition);
+
   return (
     mounted && (
       <div className={cx("profile-card", "container", "container-is-rounded")}>

@@ -19,6 +19,7 @@
     &__content {
         height: 100%;
         padding: 1rem 1.25rem !important;
+        position: relative;
         @include tablet {
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
@@ -72,6 +73,19 @@
             @include tablet {
                 margin-bottom: 2.75rem;
             }
+        }
+    }
+    &__scroll {
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        gap: 0.75rem;
+        right: 1rem;
+        &-icon {
+            cursor: url(/cursors/pointer.png) 14 0,pointer;
         }
     }
 }

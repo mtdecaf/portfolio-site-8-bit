@@ -1,28 +1,48 @@
+import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
+
 import styles from "./ProfileCard.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const ProfileCard = ({ mounted, windowWidth }) => {
+const ProfileCard = ({ mounted }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const contentRef = useRef(null);
+  const statsRef = useRef(null);
+  const descRef = useRef(null);
+
+  const onScroll = () => {
+    const scrollTop = contentRef.current.scrollTop;
+    setScrollPosition(scrollTop);
+  };
+  const scrollTo = (position) => {
+    if (position === "up") {
+      statsRef.current?.scrollIntoView({behavior: 'smooth'});
+    }
+    if (position === "down") {
+      descRef.current?.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+  console.log(scrollPosition);
   return (
     mounted && (
-      <div
-        className={cx(
-          "profile-card",
-          "container",
-          "container-is-rounded"
-        )}
-      >
+      <div className={cx("profile-card", "container", "container-is-rounded")}>
         <h1
           className={cx("profile-card__title", "title", "is-container-title")}
         >
           Developer Profile
         </h1>
-        <div className={cx("profile-card__content")}>
+        <div
+          className={cx("profile-card__content")}
+          ref={contentRef}
+          onScroll={onScroll}
+        >
           <div
             className={cx(
               "profile-card__stats-wrap",
               "profile-card__content-child"
             )}
+            ref={statsRef}
           >
             <div className={cx("profile-card__stats-profile-wrap")}>
               <img
@@ -31,7 +51,7 @@ const ProfileCard = ({ mounted, windowWidth }) => {
                 alt="Jacky Cao Profile Picture"
               />
             </div>
-            <ul className={cx("profile-card__stats-list")} id="stats-section">
+            <ul className={cx("profile-card__stats-list")}>
               <li className={cx("profile-card__stats-item")}>
                 Name: Jacky Cao
               </li>
@@ -53,7 +73,7 @@ const ProfileCard = ({ mounted, windowWidth }) => {
               "profile-card__desc-wrap",
               "profile-card__content-child"
             )}
-            id="desc-section"
+            ref={descRef}
           >
             <p className={cx("profile-card__desc")}>
               A Software Developer who specializes in web development and neural
@@ -69,6 +89,10 @@ const ProfileCard = ({ mounted, windowWidth }) => {
               efficient solutions and is well versed in design patterns.
             </p>
           </div>
+        </div>
+        <div className={cx("profile-card__scroll")}>
+          <Image onClick={() => scrollTo("up")} className={cx("profile-card__scroll-icon")} src="/container-corner.svg" width="24" height="24" />
+          <Image onClick={() => scrollTo("down")} className={cx("profile-card__scroll-icon")} src="/container-corner.svg" width="24" height="24" />
         </div>
       </div>
     )

@@ -106,12 +106,12 @@ const PageNav = () => {
           className={cx(
             "page-nav__button",
             "page-nav__option",
-            "page-nav__projects",
+            "page-nav__blog",
             "button"
           )}
           onClick={() => window.open("https://medium.com/@JackyCaoVan")}
         >
-          Blogs
+          Blog
         </button>
       </div>
     </div>

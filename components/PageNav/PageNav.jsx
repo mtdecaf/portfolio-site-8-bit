@@ -102,6 +102,17 @@ const PageNav = () => {
         >
           Projects
         </button>
+        <button
+          className={cx(
+            "page-nav__button",
+            "page-nav__option",
+            "page-nav__projects",
+            "button"
+          )}
+          onClick={() => window.open("https://medium.com/@JackyCaoVan")}
+        >
+          Blogs
+        </button>
       </div>
     </div>
   ) : null;

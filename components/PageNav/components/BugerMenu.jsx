@@ -46,7 +46,17 @@ const BurgerMenu = ({ setNavIsOpen, router, handleRouteChange }) => {
         >
           Projects
         </button>
-
+        <button
+          className={cx(
+            "burger-menu__button",
+            "burger-menu__option",
+            "burger-menu__blog",
+            "button"
+          )}
+          onClick={() => window.open("https://medium.com/@JackyCaoVan")}
+        >
+          Blog
+        </button>
         <div className={cx("burger-menu__close-wrap")}>
           <FaBackward
             className={cx("burger-menu__close")}

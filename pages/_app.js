@@ -2,8 +2,6 @@ import "../styles/global/global.scss";
 import Layout from "../components/layout";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
-// import "nes.css/css/nes.min.css";
-
 
 function MyApp({ Component, pageProps }) {
   return (

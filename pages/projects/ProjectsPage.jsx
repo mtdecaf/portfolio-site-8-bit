@@ -9,7 +9,7 @@ const ProjectsPage = () => {
 
   return (projects.length === 0 ? (
     <div className={cx("projects-page")}>
-        <p className={cx("projects-page__msg")}>Whoops, you caught me at a bad time. There&#39;s no projects on display right now. I&#39;m sorry... Forgive me papa...</p>
+        <p className={cx("projects-page__msg")}>I am blaming Heroku for taking down all of my projects. More to come tho!</p>
     </div>
   ) :null)
 };
